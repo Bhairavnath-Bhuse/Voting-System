@@ -1,0 +1,134 @@
+{
+    "Users": [
+      {
+        "UserID": 1,
+        "Name": "Aarav Sharma",
+        "Email": "aarav.sharma@gmail.com",
+        "Password": "aarav123",
+        "Phone": "9876543210",
+        "VoterID": "MH2025A001",
+        "UserType": "voter"
+      },
+      {
+        "UserID": 2,
+        "Name": "Meera Patel",
+        "Email": "meera.patel@gmail.com",
+        "Password": "meera@2025",
+        "Phone": "9823098712",
+        "VoterID": "GJ2025B002",
+        "UserType": "voter"
+      },
+      {
+        "UserID": 3,
+        "Name": "Ravi Verma",
+        "Email": "ravi.verma@gmail.com",
+        "Password": "ravi@123",
+        "Phone": "9001234567",
+        "VoterID": "UP2025C003",
+        "UserType": "admin"
+      },
+      {
+        "UserID": 4,
+        "Name": "Sneha Iyer",
+        "Email": "sneha.iyer@gmail.com",
+        "Password": "sneha456",
+        "Phone": "9123456789",
+        "VoterID": "TN2025D004",
+        "UserType": "voter"
+      },
+      {
+        "UserID": 5,
+        "Name": "Imran Khan",
+        "Email": "imran.khan@gmail.com",
+        "Password": "imrank@321",
+        "Phone": "9812345670",
+        "VoterID": "DL2025E005",
+        "UserType": "voter"
+      }
+    ],
+    "Elections": [
+      {
+        "ElectionID": 1,
+        "Title": "Lok Sabha Elections 2025",
+        "StartDate": "2025-04-11",
+        "EndDate": "2025-04-19"
+      },
+      {
+        "ElectionID": 2,
+        "Title": "Maharashtra Assembly Elections 2025",
+        "StartDate": "2025-05-02",
+        "EndDate": "2025-05-10"
+      }
+    ],
+    "Candidates": [
+      {
+        "CandidateID": 1,
+        "Name": "Priya Deshmukh",
+        "ElectionID": 1,
+        "Party": "Bharatiya Janata Party (BJP)"
+      },
+      {
+        "CandidateID": 2,
+        "Name": "Anil Shinde",
+        "ElectionID": 1,
+        "Party": "Indian National Congress (INC)"
+      },
+      {
+        "CandidateID": 3,
+        "Name": "Farhan Qureshi",
+        "ElectionID": 1,
+        "Party": "Aam Aadmi Party (AAP)"
+      },
+      {
+        "CandidateID": 4,
+        "Name": "Neha Kulkarni",
+        "ElectionID": 2,
+        "Party": "Shiv Sena"
+      },
+      {
+        "CandidateID": 5,
+        "Name": "Yashwant Patil",
+        "ElectionID": 2,
+        "Party": "Nationalist Congress Party (NCP)"
+      },
+      {
+        "CandidateID": 6,
+        "Name": "Ritika Bhonsle",
+        "ElectionID": 2,
+        "Party": "Maharashtra Navnirman Sena (MNS)"
+      }
+    ],
+    "Votes": [
+      {
+        "VoteID": 1,
+        "UserID": 1,
+        "CandidateID": 2,
+        "VoteDate": "2025-04-12"
+      },
+      {
+        "VoteID": 2,
+        "UserID": 2,
+        "CandidateID": 1,
+        "VoteDate": "2025-04-13"
+      },
+      {
+        "VoteID": 3,
+        "UserID": 4,
+        "CandidateID": 3,
+        "VoteDate": "2025-04-15"
+      },
+      {
+        "VoteID": 4,
+        "UserID": 5,
+        "CandidateID": 5,
+        "VoteDate": "2025-05-03"
+      },
+      {
+        "VoteID": 5,
+        "UserID": 1,
+        "CandidateID": 4,
+        "VoteDate": "2025-05-04"
+      }
+    ]
+  }
+  
