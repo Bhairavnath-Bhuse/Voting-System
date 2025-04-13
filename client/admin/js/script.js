@@ -16,7 +16,8 @@ function loadPageNavbar(page) {
             document.getElementById('main-content').innerHTML = data;
         })
         .catch(err => {
-            document.getElementById('main-content').innerHTML = '<p class="text-danger">Failed to load content.</p>';
+            console.log("Error occur while loading Navbar")
+            // document.getElementById('main-content').innerHTML = '<p class="text-danger">Failed to load content.</p>';
         });
 }
 

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Orders Data Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      background-color: white;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #eee;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍽️ Restaurant Orders Dashboard</h1>
+
+    <h2>👥 Users</h2>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>UserID</th><th>Name</th><th>Email</th><th>Phone</th><th>UserType</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>🏬 Restaurants</h2>
+    <table id="restaurantsTable">
+      <thead>
+        <tr>
+          <th>RestaurantID</th><th>Name</th><th>Location</th><th>Contact</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>🍛 Food Items</h2>
+    <table id="foodItemsTable">
+      <thead>
+        <tr>
+          <th>ItemID</th><th>Name</th><th>Price</th><th>RestaurantID</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>📦 Orders</h2>
+    <table id="ordersTable">
+      <thead>
+        <tr>
+          <th>OrderID</th><th>UserID</th><th>RestaurantID</th><th>OrderDate</th><th>TotalAmount</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>🧾 Order Items</h2>
+    <table id="orderItemsTable">
+      <thead>
+        <tr>
+          <th>OrderItemID</th><th>OrderID</th><th>ItemID</th><th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    const API_URL = "https://raw.githubusercontent.com/Bhairavnath-Bhuse/Capgemini-Project/refs/heads/master/db.json";
+
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => {
+        populateTable("usersTable", data.Users);
+        populateTable("restaurantsTable", data.Restaurants);
+        populateTable("foodItemsTable", data.FoodItems);
+        populateTable("ordersTable", data.Orders);
+        populateTable("orderItemsTable", data.OrderItems);
+      })
+      .catch(err => console.error("Error fetching data:", err));
+
+    function populateTable(tableId, records) {
+      const tbody = document.querySelector(`#${tableId} tbody`);
+      records.forEach(record => {
+        const row = document.createElement("tr");
+        for (const value of Object.values(record)) {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          row.appendChild(cell);
+        }
+        tbody.appendChild(row);
+      });
+    }
+  </script>
+</body>
+</html>

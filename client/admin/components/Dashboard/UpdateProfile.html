@@ -1,0 +1,57 @@
+<div class="container mt-3" style="overflow-y: scroll; height: 90vh;">
+  <h2 class="mb-4 text-center text-orange">Update Profile</h2>
+  <form class="p-4 rounded shadow text-dark border border-primary">
+
+    <div style="display:flex; justify-content: space-between;">
+      <div class="mb-3 " style="width: 40%;">
+        <label for="fullName" class="form-label text-dark">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+      </div>
+  
+      <div class="mb-3" style="width: 45%;">
+        <label for="email" class="form-label text-dark">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+      <div class="mb-3" style="width: 40%;">
+        <label for="phone" class="form-label text-dark">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+      </div>
+  
+      <div class="mb-3" style="width: 45%;">
+        <label for="age" class="form-label text-dark">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter Age">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="address" class="form-label text-dark">Address</label>
+      <input type="text" class="form-control" id="address" placeholder="Enter Address">
+    </div>
+
+    <div class="mb-3">
+      <label for="constituency" class="form-label text-dark">Constituency</label>
+      <input type="text" class="form-control" id="constituency" placeholder="Enter Constituency">
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label text-dark">New Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter new password">
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-light bg-primary text-white">Update Profile</button>
+    </div>
+  </form>
+</div>
+
+<!-- Collapsible menu with bg-primary -->
+<div class="collapse bg-primary" id="menu1">
+  <ul class="nav flex-column ms-3">
+    <li><a href="#" class="nav-link text-white" onclick="loadPage('page1.html')">Candidate Master</a></li>
+    <li><a href="#" class="nav-link text-white" onclick="loadPage('page2.html')">Election Master</a></li>
+    <li><a href="#" class="nav-link text-white" onclick="loadPage('page2.html')">Voter Registration</a></li>
+  </ul>
+</div>
